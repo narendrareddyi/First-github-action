@@ -14,6 +14,7 @@ jobs:
           echo "Hello from GitHub Actions!"
   build-job:
     runs-on: ubuntu-latest
+    needs: first-job
     steps:
       - name: Build project
         run: |
