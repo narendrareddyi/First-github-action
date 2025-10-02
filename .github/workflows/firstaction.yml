@@ -10,5 +10,6 @@ jobs:
         run: echo "Done bye!"
       - name: multiline shell cmd
         run: |
-          echo: "first line"
-          echo: "decond line"
+          echo "Starting script..."
+          echo "Hello from GitHub Actions!" > output/logs/hello.txt
+      
