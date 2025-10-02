@@ -1,0 +1,10 @@
+name: output of git
+on: workflow_dispatch
+jobs:
+  outputjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: outputof github
+        run: echo "{{toJSON(github)}}"
+      
+    
