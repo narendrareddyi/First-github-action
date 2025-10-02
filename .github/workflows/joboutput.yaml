@@ -1,0 +1,17 @@
+name: job output
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{steps.setver.outputs.version}}
+    steps:
+      - id: stever
+        run: echo "version=1.2.3" >> $GITHUB_OUTPUT
+  job2:
+      needs: job1
+      runs-on: ubuntu-latest
+      steps:
+          - run: echo "The version is ${{ needs.job1.outputs.version }}"
+
+      
