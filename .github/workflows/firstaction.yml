@@ -12,4 +12,18 @@ jobs:
         run: |
           echo "Starting script..."
           echo "Hello from GitHub Actions!"
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build project
+        run: |
+          mkdir output
+          echo "Hello, World!" > output/hello.txt
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact
+          path: output/
+  
       
