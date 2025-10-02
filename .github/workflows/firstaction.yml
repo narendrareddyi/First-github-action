@@ -11,5 +11,5 @@ jobs:
       - name: multiline shell cmd
         run: |
           echo "Starting script..."
-          echo "Hello from GitHub Actions!" > output/logs/hello.txt
+          echo "Hello from GitHub Actions!"
       
