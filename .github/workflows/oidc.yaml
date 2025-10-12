@@ -1,7 +1,9 @@
 
 
 name: Run Azure Login with OIDC
-on: main
+on: Push
+  branches:
+   - main
 
 permissions:
   id-token: write
